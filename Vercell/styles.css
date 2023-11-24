@@ -1,0 +1,201 @@
+/* styles.css */
+@font-face {
+  font-family: "GeistSans";
+  src: url("./Assets/Geist/Geist-Light.woff2") format("woff2"),
+    url("./Assets/Geist/Geist-Thin.woff2") format("woff2");
+  font-weight: lighter;
+}
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color and font styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "GeistSans", sans-serif;
+}
+
+/* Style header */
+header {
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  margin: 5rem 0;
+
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.plan-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pricing-plan .pop-container {
+  position: absolute;
+}
+
+.pricing-plan .popular {
+  position: relative;
+  top: -40px;
+  left: 80px;
+  background-color: #000000;
+  border-radius: 8px;
+  color: white;
+  margin: auto;
+  padding: 10px 15px;
+  width: fit-content;
+}
+
+/* Style pricing plans */
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 1.5rem;
+
+  text-align: left;
+}
+
+.pricing-plan .pp-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pricing-plan .pp-header h2 {
+  font-size: 18px;
+}
+
+.pricing-plan .pp-header > p {
+  color: hsla(0, 0%, 40%, 1);
+  margin-bottom: 10px;
+}
+
+.pricing-plan .pp-header > p:first-of-type {
+  color: hsla(0, 0%, 9%, 1);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.pricing-plan ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing-plan ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.pricing-plan ul li p {
+  font-weight: 100;
+  font-size: 14px;
+  color: gray;
+}
+
+.pricing-plan ul li img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Style buttons */
+
+.pricing-plan a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.pricing-plan .btn {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.pricing-plan .btn:hover {
+  background-color: black;
+}
+
+.pricing-plan .btn-white {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.pricing-plan .btn-enterprise {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: auto;
+    width: 90%;
+  }
+  .plan-card-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  /* .plan-card-wrapper .pricing-plan {
+    flex: 30;
+  }
+
+  .plan-card-wrapper .enterprise-plan {
+    flex: 40;
+  } */
+
+  .plan-card-wrapper .pricing-plan .pp-header {
+    height: 130px;
+  }
+
+  .pricing-plan ul {
+    height: 300px;
+  }
+
+  .pricing-plan ul li {
+    font-size: 0.875rem;
+  }
+
+  .pricing-plan ul li img {
+    width: 1rem;
+    object-fit: contain;
+  }
+
+  .pricing-plan .btn {
+    font-size: 0.875rem;
+    padding: 0.625rem 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 56px;
+    line-height: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .pricing-plan .pp-header h2 {
+    font-size: 0.875rem;
+  }
+}

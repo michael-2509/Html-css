@@ -1,0 +1,17 @@
+.btn {
+  border: 1px solid gray;
+  color: white;
+  padding: 10px;
+}
+
+.blue-btn {
+  background-color: dodgerblue;
+}
+
+.red-btn {
+  background-color: tomato;
+}
+
+.green-btn {
+  background-color: mediumseagreen;
+}
