@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className=" mt-12 w-[236px] h-[900px] bg-white shadow">
+    <div className=" w-[236px] h-[900px] bg-white shadow">
       <img src={logo} alt="logo" className="ml-10 pt-6 w-[130px] h-[32.29px" />
 
       <NavLink
