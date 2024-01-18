@@ -6,9 +6,11 @@ import classes from "./Products.module.css";
 
 import { slicedArray } from "../../utils";
 import ProductCategory from "./ProductCategory";
+import Header from "../Header/Header";
 
 const Products = () => {
   const [Data, setData] = useState([]);
+  const [Loading, setLoading] = useState(false);
   let newData = [];
 
   useEffect(() => {
@@ -16,12 +18,23 @@ const Products = () => {
   }, []);
 
   const getProductList = async () => {
-    const response = await axios.get("https://dummyjson.com/products");
-    setData(response.data.products);
+    setLoading(!Loading);
+    try {
+      console.log("try");
+      const response = await axios.get("https://dummyjson.com/products");
+      setData(response.data.products);
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+      setLoading(!Loading);
+    }
   };
 
+  if (Loading) {
+    return <p>Loading...</p>;
+  }
+
   if (Data.length === 0) {
-    // console.log("Empty", Data);
     return <p>No data</p>;
   }
 
@@ -31,6 +44,7 @@ const Products = () => {
 
   return (
     <div>
+      <Header />
       <ProductCategory />
       <h2>PRODUCT LIST</h2>
       <div className={classes.product}>

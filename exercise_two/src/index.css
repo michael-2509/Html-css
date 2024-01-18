@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+@layer base {
+  body {
+    @apply font-sans leading-6 bg-gray-200 m-0 p-0;
+  }
+}
